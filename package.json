@@ -1,0 +1,44 @@
+{
+  "name": "@khulnasoft/l10nify",
+  "version": "0.4.0",
+  "description": "Localization workflow for Browserify",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "standard",
+    "test": "tape test/test.js",
+    "preversion": "npm test",
+    "version": "changes --commits",
+    "postversion": "git push --follow-tags && npm publish --access public"
+  },
+  "bin": {
+    "extract-strings": "bin/cmd.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khulnasoft-lab/l10nify.git"
+  },
+  "keywords": [
+    "browserify",
+    "l10",
+    "localization"
+  ],
+  "author": "Md Sulaiman <dev.khulnasoft@icloud.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasoft-lab/l10nify/issues"
+  },
+  "homepage": "https://github.com/khulnasoft-lab/l10nify#readme",
+  "devDependencies": {
+    "@studio/changes": "^2.0.1",
+    "browserify": "^16.5.1",
+    "standard": "^14.3.4",
+    "tape": "^5.0.1",
+    "vm": "^0.1.0"
+  },
+  "dependencies": {
+    "arg": "^4.1.3",
+    "jscodeshift": "^0.13.1",
+    "pofile": "^1.1.0",
+    "through2": "^4.0.2"
+  }
+}
